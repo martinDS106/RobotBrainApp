@@ -11,7 +11,7 @@ echo ========================================
 echo.
 
 rem ========== EDIT THIS: your GitHub repo URL ==========
-set "GITHUB_URL=https://github.com/YOUR_USERNAME/RobotBrain.git"
+set "GITHUB_URL=https://github.com/martinDS106/RobotBrainApp.git"
 rem Example: set "GITHUB_URL=https://github.com/AhmedAli/RobotBrain.git"
 rem =====================================================
 
