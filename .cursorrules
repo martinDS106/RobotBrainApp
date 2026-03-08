@@ -1,0 +1,65 @@
+# ROBOT BRAIN - Cyberpunk Robot Controller App
+
+## Project Overview
+Premium mobile application for controlling ESP32-powered robots with cyberpunk aesthetic, voice AI, sequence recording, and custom command mapping.
+
+## Tech Stack
+- React Native 0.76+ with TypeScript
+- react-native-ble-plx for Bluetooth
+- react-native-reanimated for animations
+- react-native-svg for graphics
+- zustand for state management
+- @react-navigation for navigation
+
+## Project Structure
+src/
+├── screens/
+│   ├── MainController/     # Main control screen
+│   ├── CodeLab/            # Command mapping
+│   ├── Sequences/          # Sequence library
+│   ├── VoiceStudio/        # Voice AI training
+│   └── Settings/           # App settings
+├── components/
+│   ├── LEDStrip/           # LED animation components
+│   ├── HolographicJoystick/ # 360° joystick
+│   ├── TactileSliders/     # Vertical sliders
+│   ├── VoiceOrb/          # Holographic voice orb
+│   ├── QuickCommands/      # Command matrix buttons
+│   └── StatusBar/          # Top status bar
+├── services/
+│   ├── bluetooth/          # ESP32 communication
+│   ├── voice/              # Voice AI service
+│   ├── sequences/          # Sequence recording/playback
+│   └── commands/           # Command mapping
+├── store/
+│   ├── useRobotStore.ts    # Robot state
+│   ├── useSequenceStore.ts # Sequences
+│   └── useSettingsStore.ts # Settings
+├── theme/
+│   ├── colors.ts           # Cyberpunk color palette
+│   ├── typography.ts       # Fonts and text styles
+│   └── effects.ts          # Visual effects (glow, glitch, etc.)
+├── utils/
+│   ├── ledAnimations.ts    # LED animation library
+│   ├── bluetoothProtocol.ts # Message encoding/decoding
+│   └── voiceParser.ts      # Voice command parsing
+└── constants/
+    ├── commands.ts         # Command definitions
+    └── protocol.ts         # Bluetooth protocol specs
+
+## Design Principles
+- Cyberpunk aesthetic: Neon colors, glassmorphism, holographic effects
+- LED Framework: Every UI element has LED indicators
+- Visual Feedback: Every action has beautiful confirmation
+- Infinite Flexibility: Custom command mapping for any robot
+
+## Key Features
+1. 360° Holographic Joystick with LED ring
+2. Tactile Command God sliders (4 vertical sliders)
+3. Voice AI with holographic orb
+4. Sequence recording with timeline
+5. Code Lab for custom command mapping
+6. Real-time LED animations
+7. Cyberpunk UI with glassmorphism
+
+

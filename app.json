@@ -1,4 +1,14 @@
 {
   "name": "RobotBrain",
-  "displayName": "RobotBrain"
+  "displayName": "RobotBrain",
+  "expo": {
+    "name": "RobotBrain",
+    "slug": "robotbrain",
+    "version": "1.0.0",
+    "scheme": "robotbrain",
+    "platforms": ["android", "ios"],
+    "android": {
+      "package": "com.robotbrain"
+    }
+  }
 }

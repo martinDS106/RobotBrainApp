@@ -1,79 +1,109 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🤖 ROBOT BRAIN - Cyberpunk Robot Controller
 
-# Getting Started
+Premium mobile application for controlling ESP32-powered robots with a stunning cyberpunk aesthetic.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## 🎨 Features
 
-## Step 1: Start the Metro Server
+- **360° Holographic Joystick** - Intuitive robot driving with LED ring feedback
+- **Tactile Command God** - Independent control of arms, grippers, and head
+- **Voice AI Integration** - Talk to your robot with holographic voice orb
+- **Command Mapping** - Program any button to send any command
+- **Sequence Recording** - Teach your robot complex routines
+- **LED Framework** - Beautiful animated lighting throughout
+- **Real-time Telemetry** - See battery, torque, and connection status
+- **Cyberpunk Aesthetic** - Neon colors, glassmorphism, holographic effects
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## 🚀 Getting Started
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Prerequisites
+
+- Node.js 18+
+- React Native 0.76+
+- Android Studio (for Android development)
+- ESP32 robot with BLE support
+
+### Installation
 
 ```bash
-# using npm
+cd "D:\Bt controller\RobotBrain"
+npm install
+```
+
+### Running the App
+
+```bash
+# Start Metro bundler
 npm start
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
+# Run on Android (in another terminal)
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### For iOS
+## 📁 Project Structure
 
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```
+src/
+├── screens/          # App screens
+│   └── MainController/  # Main control interface
+├── components/      # Reusable components
+├── services/        # Bluetooth, Voice, etc.
+├── store/           # Zustand state management
+├── theme/           # Cyberpunk colors & typography
+├── utils/           # Utilities (LED animations, protocol)
+└── constants/       # Command definitions
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## 🎨 Design System
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Colors
+- **Electric Cyan**: `#00FFFF` - Primary accent
+- **Neon Magenta**: `#FF00FF` - Secondary accent
+- **Amber**: `#FFBF00` - Tertiary accent
+- **Deep Charcoal**: `#0A0A0F` - Background
 
-## Step 3: Modifying your App
+### Typography
+- **Primary Font**: Orbitron (Headers, labels)
+- **Secondary Font**: Roboto Mono (Commands, data)
 
-Now that you have successfully run the app, let's modify it.
+## 🔌 Bluetooth Protocol
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+The app uses a custom protocol for ESP32 communication:
+- Format: `[STX][LENGTH][COMMAND_ID][PAYLOAD][CHECKSUM][ETX]`
+- Commands encoded in base64 for BLE transmission
+- Automatic checksum validation
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## 📝 Development Status
 
-## Congratulations! :tada:
+### ✅ Completed
+- Project setup
+- Cyberpunk theme system
+- LED animation framework
+- Command definitions
+- Bluetooth protocol encoding
+- Main controller screen (basic layout)
+- State management (Zustand)
 
-You've successfully run and modified your React Native App. :partying_face:
+### 🚧 In Progress
+- Holographic joystick implementation
+- Tactile sliders
+- Voice orb component
+- Bluetooth service integration
 
-### Now what?
+### 📋 Planned
+- Sequence recording
+- Code Lab (command mapping)
+- Voice AI integration
+- Settings screen
+- Advanced LED animations
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## 🤝 Contributing
 
-# Troubleshooting
+This is a work in progress. Contributions welcome!
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 📄 License
 
-# Learn More
+MIT
 
-To learn more about React Native, take a look at the following resources:
+---
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Built with ❤️ and cyberpunk vibes**

@@ -25,6 +25,9 @@ DerivedData
 # Android/IntelliJ
 #
 build/
+android/build/
+android/app/build/
+android/.gradle/
 .idea
 .gradle
 local.properties
@@ -64,6 +67,15 @@ yarn-error.log
 
 # testing
 /coverage
+
+# Expo
+.expo/
+
+# Local / temp
+check_any_missing.flag
+*.log
+.env
+.env.*
 
 # Yarn
 .yarn/*
