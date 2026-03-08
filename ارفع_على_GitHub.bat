@@ -55,7 +55,14 @@ git remote add origin "%GITHUB_URL%"
 echo     Done.
 echo.
 
-echo [6] Pushing to GitHub...
+echo [6] Pulling remote changes first (merge with GitHub)...
+git pull origin main --allow-unrelated-histories --no-edit
+if %errorlevel% neq 0 (
+  echo     Pull had issues - trying push anyway...
+)
+echo.
+
+echo [7] Pushing to GitHub...
 echo     (You may be asked for username and Password.)
 echo     Password = Personal Access Token from GitHub, not account password.
 echo.
